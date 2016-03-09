@@ -1,0 +1,338 @@
+@font-face {
+    font-family: 'Segoe UI Light';
+    src: url('SegoeUILight.ttf');
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #455A64;
+    font-family: 'Segoe UI Light', sans-serif-light, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#Header {
+    background-color: #37474F;
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+#HeaderTitle {
+    display: inline-block;
+    color: #90A4AE;
+    font-size: 4.25vh;
+    width: auto;
+    position: relative;
+    top: 1.6vh;
+    left: 2.5vh;
+}
+
+#MenuButtonSVG {
+    display: inline-block;
+    height: 5vh;
+    width: 6.67vh;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 4;
+    position: relative;
+    top: 2.5vh;
+    left: 1.75vh;
+}
+
+#MenuButtonSVG rect {
+    fill: #90A4AE;
+}
+
+#MenuButtonSVG #Top {
+    -webkit-transform: matrix(0.75, 0, 0, 0.75, 8, 2.875);
+    -moz-transform: matrix(0.75, 0, 0, 0.75, 8, 2.875);
+    -ms-transform: matrix(0.75, 0, 0, 0.75, 8, 2.875);
+    -o-transform: matrix(0.75, 0, 0, 0.75, 8, 2.875);
+    transform: matrix(0.75, 0, 0, 0.75, 8, 2.875);
+}
+
+#MenuButtonSVG #Middle {
+    -webkit-transform: matrix(0.75, 0, 0, 0.75, 8, 5.97067);
+    -moz-transform: matrix(0.75, 0, 0, 0.75, 8, 5.97067);
+    -ms-transform: matrix(0.75, 0, 0, 0.75, 8, 5.97067);
+    -o-transform: matrix(0.75, 0, 0, 0.75, 8, 5.97067);
+    transform: matrix(0.75, 0, 0, 0.75, 8, 5.97067);
+}
+
+#MenuButtonSVG #Bottom {
+    -webkit-transform: matrix(0.75, 0, 0, 0.75, 8, 9.06639);
+    -moz-transform: matrix(0.75, 0, 0, 0.75, 8, 9.06639);
+    -ms-transform: matrix(0.75, 0, 0, 0.75, 8, 9.06639);
+    -o-transform: matrix(0.75, 0, 0, 0.75, 8, 9.06639);
+    transform: matrix(0.75, 0, 0, 0.75, 8, 9.06639);
+}
+
+#SideMenu {
+    display: block;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    background-color: #263238;
+    width: 80vw;
+    max-width: 238px;
+    height: 100vh;
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+    z-index: 3;
+    padding-top: 1.5vh;
+}
+
+#SideMenuClose {
+    background: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+}
+
+.SideMenuItem {
+    width: 100%;
+    display: block;
+    color: #90A4AE;
+    background-color: #263238;
+    font-size: 3.3vh;
+    padding: 1.5vh 1.5vh 1.5vh 3vh;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#MainFrame {
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    z-index: 1;
+}
+
+.Frame {
+    width: 100vw;
+    height: 90vh;
+    position: fixed;
+    top: 10vh;
+    left: 0;
+    z-index: 0;
+    color: #90A4AE;
+    padding: 2vh;
+    box-sizing: border-box;
+    background-color: #455A64;
+    opacity: 0;
+    overflow-y: auto;
+}
+
+.Frame h3 {
+    margin: 0;
+    padding: 0 0 1vh 0;
+    font-weight: 400;
+    font-size: 3.25vh;
+}
+
+.Frame h1 {
+    padding: 0 0 1vh 0;
+    font-weight: 400;
+    font-size: 5vh;
+    margin: 0 0 2vh 0;
+    border-bottom: 0.25vh solid #37474F;
+}
+
+.Frame table {
+    float: right;
+    width: 100%;
+    color: #90A4AE;
+    padding: 0 0 1vh 1vh;
+    font-size: 2.5vh;
+    visibility: visible;
+}
+
+.Frame td {
+    padding: 0.5vh;
+}
+
+.Frame .DescriptionColumn, .TotalColumn {
+    color: #CFD8DC;
+}
+
+.Frame .AmountColumn {
+    text-align: right;
+}
+
+.Frame .TotalColumn {
+    width: 100%;
+    text-align: right;
+    border-top: 0.25vh solid #37474F;
+}
+
+.Frame .RemoveExpenseButtonColumn {
+    width: 4vh;
+}
+
+#AddExpenseButton {
+    width: 10vh;
+    position: fixed;
+    top: 5vh;
+    right: 1.5vh;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.RemoveExpenseButton {
+    width: 4vh;
+    cursor: pointer;
+}
+
+#RemoveExpenseButtonCache {
+    visibility: hidden;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+}
+
+#PopUpBack {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+    opacity: 0;
+}
+
+#PopUpFrame {
+    position: fixed;
+    display: block;
+    width: 80vmin;
+    max-width: 280px;
+    height: auto;
+    padding: 4vw;
+    background-color: #37474F;
+    margin: 50vh 0 0 50vw;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #CFD8DC;
+    z-index: 0;
+    opacity: 0;
+}
+
+#PopUpFrame h1 {
+    margin: 0;
+    padding: 0 0 3vw 0;
+    font-size: 8vw;
+    font-weight: 400;
+    border-bottom: 0.5vw solid #455A64;
+}
+
+#PopUpFrame h3 {
+    margin: 0;
+    padding: 2vw 0 2vw 0;
+    font-size: 6vw;
+    font-weight: 400;
+}
+
+#PopUpFrame input {
+    margin: 0;
+    padding: 1vw 3vw 1vw 3vw;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    border: none;
+    background-color: #455A64;
+    font-family: 'Segoe UI Light', sans-serif-light, sans-serif;
+    font-size: 5vw;
+    color: #CFD8DC;
+    outline: none;
+}
+
+#PopUpFrame select {
+    margin: 0;
+    padding: 2vw;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+    border: none;
+    background-color: #455A64;
+    font-family: 'Segoe UI Light', sans-serif-light, sans-serif;
+    font-size: 5vw;
+    color: #CFD8DC;
+    outline: none;
+}
+
+.PopUpButton {
+    display: inline-block;
+    margin: 4vw 2vw 0 0;
+    padding: 2vw 4vw 2vw 4vw;
+    overflow: auto;
+    border: none;
+    background-color: #455A64;
+    font-family: 'Segoe UI Light', sans-serif-light, sans-serif;
+    font-size: 5vw;
+    color: #B0BEC5;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+
+    #PopUpFrame {
+        padding: 2vh;
+    }
+
+    #PopUpFrame h1 {
+        padding: 0 0 1.5vh 0;
+        font-size: 4vh;
+        border-bottom: 0.25vh solid #455A64;
+    }
+
+    #PopUpFrame h3 {
+        padding: 1vh 0 1vh 0;
+        font-size: 3vh;
+    }
+
+    #PopUpFrame input {
+        padding: 0.5vh 1.5vh 0.5vh 1.5vh;
+        font-size: 2.5vh;
+    }
+
+    #PopUpFrame select {
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .PopUpButton {
+        margin: 2vh 1vh 0 0;
+        padding: 1vh 2vh 1vh 2vh;
+        font-size: 2.5vh;
+    }
+
+}
